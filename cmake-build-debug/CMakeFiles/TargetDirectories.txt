@@ -1,0 +1,3 @@
+/Users/carlosandradeguzman/Carlos/Documentos/Google Drive (unsa)/2 Año/III Semestre/CC2/2 PArte/8 Semana/Laboratorio_6_cc2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/carlosandradeguzman/Carlos/Documentos/Google Drive (unsa)/2 Año/III Semestre/CC2/2 PArte/8 Semana/Laboratorio_6_cc2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/carlosandradeguzman/Carlos/Documentos/Google Drive (unsa)/2 Año/III Semestre/CC2/2 PArte/8 Semana/Laboratorio_6_cc2/cmake-build-debug/CMakeFiles/Laboratorio_6_cc2.dir
