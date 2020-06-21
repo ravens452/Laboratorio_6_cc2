@@ -4,6 +4,7 @@
 using namespace std;
 
 int main(){
+    int p;
     cout<<"hola: "<<endl;
     LinkedList lista1;
     int numero;
@@ -17,13 +18,16 @@ int main(){
 
     cout<<"Mostrando la lista con sobrecarga de operadores"<<endl;
     citerador it;
-    for (it=lista1.head;it!=lista1.tail; it.operator++()) {
+        for (it=lista1.begin();it!=lista1.tail; it.operator++()) {
         cout<<it.operator*()<<" ";
     }
     cout<<endl;
-    cout<<lista1.begin()->elem<<endl;
-    cout<<lista1.end()->elem<<endl;
-//    lista1.remove(5);
+    cout<<"El principio de la lista es: "<<lista1.begin()->elem<<endl;
+    cout<<"El final de la lista es: "<<lista1.end()->elem<<endl;
+
+    cout<<"Que elemento de la lista desea eliminar: "<<endl;cin>>p;
+    lista1.remove(p);
+    lista1.print();
 
 //------------------------------------------------------------------------------------
 //    lista1.insert(4);

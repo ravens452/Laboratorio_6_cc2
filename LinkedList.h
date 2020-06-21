@@ -43,7 +43,7 @@ public:
     else if(actual->next!= nullptr){ //esta en la entrelista
         anterior->next=actual->next;
         delete actual;
-        cout<<"Se elimino corectamente 2"<<endl;
+        cout<<"Se elimino corectamente el numero: "<<n<<endl;
     }else if(actual->next == nullptr && actual->elem==n){
         cout<<"Eliminando el ultimo de la fila"<<endl;
         anterior->next=actual->next;
