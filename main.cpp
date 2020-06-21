@@ -1,8 +1,7 @@
 #include <iostream>
-#include "Node.h"
 #include "LinkedList.h"
-using namespace std;
 
+using namespace std;
 
 int main(){
     cout<<"hola: "<<endl;
@@ -10,7 +9,7 @@ int main(){
     int numero;
     cout<<"Ingrese los numeros a guardar de forma ordenada (Escriba 0 para finalizar) "<<endl;cin>>numero;
     while (numero!=0){
-        lista1.insertarOrdenado(numero);
+        lista1.insert(numero);
         cin>>numero;
     }
     cout<<"Mostrando la lista sin sobrecarga de operadores"<<endl;
@@ -18,14 +17,13 @@ int main(){
 
     cout<<"Mostrando la lista con sobrecarga de operadores"<<endl;
     citerador it;
-    for (it=lista1.head;it!=lista1.final;it.operator++()) {
+    for (it=lista1.head;it!=lista1.tail; it.operator++()) {
         cout<<it.operator*()<<" ";
     }
-
-
-
-
-
+    cout<<endl;
+    cout<<lista1.begin()->elem<<endl;
+    cout<<lista1.end()->elem<<endl;
+//    lista1.remove(5);
 
 //------------------------------------------------------------------------------------
 //    lista1.insert(4);

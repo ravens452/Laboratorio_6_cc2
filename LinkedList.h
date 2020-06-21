@@ -1,10 +1,12 @@
+#include "Node.h"
+
 using namespace std;
 
 class LinkedList {
 public:
     int size{};
     Node *head = nullptr;
-    Node *final = nullptr;
+    Node *tail = nullptr;
     LinkedList(){};
     LinkedList(int size, Node *head){
         this->size = size;
@@ -12,23 +14,15 @@ public:
     };
     ~LinkedList();
 
-    void insert(int );
     void remove(int);
     void print() const;
-    void insertarOrdenado(int);
+    void insert(int);
 
+    Node *begin();
+    Node *end();
 };
 
-void LinkedList::insert(int dato){
-    Node* nuevo = new Node(nullptr,dato);
-    if (head == nullptr){
-        head=nuevo;
-            final = nuevo;
-            nuevo->elem=dato;
-    }else{
-        final->next = nuevo;
-        final = final->next;}
-}
+
 
  void LinkedList::remove(int n) {
     cout<<"Se eliminara n = "<<n<<" de la lista"<<endl;
@@ -74,7 +68,7 @@ void LinkedList::print() const {
     cout<<endl;
 }
 
-void LinkedList::insertarOrdenado(int n) {
+void LinkedList::insert(int n) {
 
     Node* nuevo = new Node();
     nuevo->elem = n;
@@ -97,6 +91,20 @@ void LinkedList::insertarOrdenado(int n) {
 
 }
 
+Node* LinkedList::begin() {
+     Node* inicio = head;
+     return inicio;
+}
+Node* LinkedList::end() {
+     Node *aux=head;
+     Node *cabeza;
+     while (aux->next!= nullptr){
+         aux=aux->next;
+     }
+     cabeza=aux;
+     return cabeza;
+}
+
 LinkedList::~LinkedList() {
 //    cout<<"El destructor ha sido invocado"<<endl;
     Node *p= head;
@@ -106,8 +114,8 @@ LinkedList::~LinkedList() {
         head=p;
     }
 }
-//--------------------------------------
-class citerador{
+
+class  citerador{
 
 private:Node* pNodo;
 public:
@@ -132,6 +140,7 @@ void citerador::operator ++() {
 int citerador::operator*() {
     return pNodo->elem;
 }
+
 bool citerador::operator==(Node *NodoEntrante) {
     return pNodo == NodoEntrante;
 }
